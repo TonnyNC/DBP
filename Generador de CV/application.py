@@ -21,4 +21,4 @@ def cvgen():
     celular = request.form.get("celular")
 
 
-    return render_template("hello.html", nombre=name, presentacion=presentacion,experiencia=experiencia,estudios=estudios,logros=logros,habilidades=habilidades, intereses=intereses, referencias=referencias, correo=correo, celular=celular)
+    return render_template("cvgen.html", nombre=name, presentacion=presentacion,experiencia=experiencia,estudios=estudios,logros=logros,habilidades=habilidades, intereses=intereses, referencias=referencias, correo=correo, celular=celular)
