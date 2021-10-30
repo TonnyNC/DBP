@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block nombre %}
+    Generador de Curriculum Vitae
+    <br>
+{% endblock %}
+
+{% block body %}
+<main class="container">
+
+    <form action="{{ url_for('cvgen') }}" method="post" class="container d-flex align-items-center justify-content-center">
+        <div class="col-12">
+            
+            <div class="row">
+                <label for="nombre" class="form-label">Nombres y Apellidos</label>
+                <input class="form-control d-flex justify-content-center" type="text" name="nombre" id="nombre" placeholder="Nombres y apellidos" aria-label="default input example">
+            </div>
+            <br>
+            <div class="row">
+                <label for="correo" class="form-label">Correo</label>
+                <input class="form-control d-flex justify-content-center" type="email" name="correo" id="correo" placeholder="Correo">
+            </div>
+            <br>
+            <div class="row">
+                <label for="celular" class="form-label">Celular</label>
+                <input class="form-control d-flex justify-content-center" type="tel" name="celular" id="celular" placeholder="N°  de celular">
+            </div>
+            <br>
+            <div class="row">
+                <label for="presentacion" class="form-label">Presentacion</label>
+                <input class="form-control d-flex justify-content-center" type="text" name="presentacion" id="presentacion" placeholder="Presentate">
+                <div class="form-text d-flex justify-content-right">
+                Cuentanos sobre ti en un parrafo breve.
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <label for="experiencia" class="form-label">Experiencia Laboral</label>
+                <input class="form-control d-flex justify-content-center" type="text" name="experiencia" id="experiencia" placeholder="Tu experiencia">
+            </div>
+            <br>
+            <div class="row">
+                <label for="estudios" class="form-label">Estudios</label>
+                <input class="form-control d-flex justify-content-center" type="text" name="estudios" id="estudios" placeholder="Que estudiaste">
+            </div>
+            <br>
+            <div class="row">
+                <label for="logros" class="form-label">Logros</label>
+                <input class="form-control d-flex justify-content-center" type="text" name="logros" id="logros" placeholder="Tus logros">
+                <div class="form-text d-flex justify-content-right">
+                Hablanos sobre tus logros personales y profesionales.
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <label for="habilidades" class="form-label">Habilidades</label>
+                <input class="form-control d-flex justify-content-center" type="text" name="habilidades" id="habilidades" placeholder="Tus habilidades">
+                <div class="form-text d-flex justify-content-right">
+                Cuentanos en que eres bueno.
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <label for="intereses" class="form-label">Intereses</label>
+                <input class="form-control d-flex justify-content-center" type="text" name="intereses" id="intereses" placeholder="Tus intereses">
+                <div class="form-text d-flex justify-content-right">
+                Cuentanos que te gusta hacer en tus tiempos libres.
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <label for="referencias" class="form-label">Referencias</label>
+                <input class="form-control d-flex justify-content-center" type="text" name="referencias" id="referencias" placeholder="Tus referencias">
+            </div>
+            <!-- <br>
+            <div class="row">
+                <label for="foto" class="form-label">Fotografia</label>
+                <input class="form-control d-flex justify-content-center" type="file" name="foto" id="foto" placeholder="Ingresa una foto tuya">
+            </div>-->
+            <br>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 d-flex justify-content-center"><button class="btn btn-primary btn-block">Crear CV</button></div>
+                <div class="col-4"></div>
+            </div>
+            <br>
+        </div>
+    </form>
+</main>
+{% endblock %}
